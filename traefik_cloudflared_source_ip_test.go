@@ -1,4 +1,4 @@
-package source_test
+package traefik_cloudflared_source_ip_test
 
 import (
 	"context"

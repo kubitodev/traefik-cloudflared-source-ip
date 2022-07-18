@@ -1,5 +1,5 @@
 // Package source provides the plugin logic
-package source
+package traefik_cloudflared_source_ip
 
 import (
 	"context"
