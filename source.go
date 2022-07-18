@@ -1,3 +1,4 @@
+// Package source provides the plugin logic
 package source
 
 import (
