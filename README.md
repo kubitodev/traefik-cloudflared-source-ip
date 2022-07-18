@@ -8,9 +8,13 @@ When Traefik runs behind Cloudflared, especially in case of a Kubernetes cluster
 
 This plugin solves the issue by overwriting the `X-Real-Ip` header, as well the `X-Forwarded-For` header, to the value of the `Cf-Connecting-Ip` which is the real source IP and is set by the Cloudflared instance on each request.
 
+The Docker image inside this repository extends the official Traefik image by simply adding this plugin as a local plugin.
+
 ## Installing with Helm
 
 There is a helm chart available as well. Check [the ArtifactHub page](https://artifacthub.io/packages/helm/kubitodev/traefik-cloudflared-source-ip) for more details. It uses the custom Docker image which extends Traefik, and allows you to run it without the need to setup Traefik Pilot.
+
+> IMPORTANT: If you are not deploying the chart with the optional official Traefik subchart dependency, make sure you use the `kubitodev/traefik-cloudflared-source-ip` Docker image for your Traefik deployment before you use the chart.
 
 ## Usage
 
