@@ -1,0 +1,9 @@
+displayName: Kubito Traefik Cloudflared Source IP
+type: middleware
+import: github.com/kubitodev/traefik-cloudflared-source-ip
+
+summary: Enables Traefik to get the correct source IP for requests, and replace the value of X-Real-Ip and X-Forwarded-For to the value of Cf-Connecting-Ip header.
+
+testData:
+  excludednets:
+    - "1.1.1.1/24"
