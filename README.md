@@ -41,7 +41,9 @@ spec:
         - "1.1.1.1/24"
 ```
 
-And after that, you can inject the middleware in an ingress route and follow the Traefik logs to see what happens upon executing a request.
+And after that, you can inject the middleware in an ingress route and follow the Traefik logs to see what happens upon executing a request. The source IP will be the first one that is not included in any of the CIDRs passed as the `excludedNets` parameter. The evaluation of the `X-Forwarded-For` or `Cf-Connecting-Ip` IPs will go from the last to the first one.
+
+You can simply leave the `excludedNets` parameter as default if you wish.
 
 ## License
 
