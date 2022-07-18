@@ -1,4 +1,4 @@
-package source_ip_test
+package source_test
 
 import (
 	"context"
