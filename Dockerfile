@@ -10,6 +10,6 @@ RUN apk add --update git && \
     --depth 1 --single-branch --branch ${PLUGIN_GIT_BRANCH}
 
 # Copy the plugin into the traefik image
-FROM traefik:2.10.4
+FROM traefik:2.10
 
 COPY --from=0 /plugins-local /plugins-local
